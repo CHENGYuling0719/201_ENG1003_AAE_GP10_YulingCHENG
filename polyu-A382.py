@@ -32,12 +32,12 @@ class AStarPlanner:
 
         ############you could modify the setup here for different aircraft models (based on the lecture slide) ##########################
         self.C_F = 1
-        self.C_T = 5
+        self.C_T = 4
         self.C_C = 10
-        self.Delta_F = 2.5
+        self.Delta_F = 2.0
         self.Delta_T = 5
-        self.Delta_T_A = 0.5 # additional time 
-        self.Delta_F_A = 0.1 # additional fuel
+        self.Delta_T_A = 0.4 # additional time 
+        self.Delta_F_A = 0.5 # additional fuel
         
         self.costPerGrid = self.C_F * self.Delta_F + self.C_T * self.Delta_T + self.C_C
 
