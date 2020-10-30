@@ -31,17 +31,15 @@ class AStarPlanner:
         self.tc_y = tc_y
 
         ############you could modify the setup here for different aircraft models (based on the lecture slide) ##########################
-        self.C_F = 1
-        self.C_T = 3
+        self.C_F = 9
+        self.C_T = 1
         self.C_C = 10
-        self.Delta_F = 1.5
-        self.Delta_T = 5
-        self.Delta_T_A = 0.3 # additional time 
-        self.Delta_F_A = 0.4 # additional fuel
-        self.C_P = -2
-        self.Delta_P = 2
+        self.Delta_F = 2
+        self.Delta_T = 8
+        self.Delta_T_A = 9 # additional time 
+        self.Delta_F_A = 1 # additional fuel
         
-        self.costPerGrid = self.C_F * self.Delta_F + self.C_T * self.Delta_T + self.C_C + self.C_P * self.Delta_P
+        self.costPerGrid = self.C_F * self.Delta_F + self.C_T * self.Delta_T + self.C_C
 
     class Node: # definition of a sinle node
         def __init__(self, x, y, cost, parent_index):
@@ -305,9 +303,6 @@ def main():
         for j in range(20, 40):
             tc_x.append(i)
             tc_y.append(j)
-
-    pc_x, py_y = [], []
-    for i in range()
 
     if show_animation:  # pragma: no cover
         plt.plot(ox, oy, ".k") # plot the obstacle
